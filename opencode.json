@@ -1,0 +1,58 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "oh-my-openagent",
+    "@tarquinen/opencode-dcp@latest",
+    "opencode-claude-auth"
+  ],
+  "permission": {
+    "external_directory": {
+      "*": "ask",
+      "~/dev/**": "allow",
+      "~/.config/opencode/**": "allow",
+      "~/.local/share/opencode/**": "allow",
+      "~/.nvm/versions/node/**": "allow",
+      "/tmp/**": "allow",
+      "/var/folders/**/T/oh-my-openagent/**": "allow"
+    }
+  },
+  "mcp": {
+    "gitlab": {
+      "enabled": false,
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@zereight/mcp-gitlab"
+      ],
+      "environment": {
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "{env:GITLAB_PERSONAL_ACCESS_TOKEN}",
+        "GITLAB_API_URL": "{env:GITLAB_API_URL}",
+        "GITLAB_READ_ONLY_MODE": "false"
+      }
+    },
+    "claw": {
+      "enabled": true,
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@opsyhq/claw",
+        "serve"
+      ]
+    }
+  },
+  "tools": {
+    "claw_claw_bash": false
+  },
+  "formatter": {
+    "uv": {
+      "disabled": true
+    }
+  },
+  "compaction": {
+    "auto": false,
+    "prune": true,
+    "reserved": 10000
+  }
+}

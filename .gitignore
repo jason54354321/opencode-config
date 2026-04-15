@@ -1,0 +1,19 @@
+node_modules/
+
+# local runtime / session state
+.omc/
+.sisyphus/
+.claude/
+
+# company-only skills
+skills/qnap/
+
+# local env / secrets
+.env
+.env.*
+*.log
+.DS_Store
+*.pem
+*.key
+*.p12
+*.pfx
