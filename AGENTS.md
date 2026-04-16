@@ -20,7 +20,7 @@
 
 ## Git Safety Protocol
 
-執行以下危險操作前，**必須用 `mcp_question` 詢問使用者確認**：
+執行危險操作前，**必須用 `mcp_question` 詢問使用者確認**：
 - `git push -f / --force / --force-with-lease`
 - `git reset --hard`
 - `git clean -fd`
@@ -29,9 +29,16 @@
 
 **例外**：若使用者訊息中已明確要求執行，可直接進行但需顯示警告。
 
+## Subagent
+- `task()` 只能二選一：`category` 或 `subagent_type`，不要同時傳。
+- 只要有 `category`，`subagent_type` 會被忽略，實際跑成 category task（通常是 Sisyphus-Junior）。
+
 ## OpenSpec / OPSX
 
 MUST DO: 當使用者要求執行 `opsx` 或你(Agent) 要執行相關操作時，必須先讀取該專案的 `.opencode/command` 目錄中的對應 `.md` 檔案
+- Archive:
+    - 若只有一個 active change，它就是目標，就不需詢問
+    - Archive 時一定要 Sync
 
 ## Machines & Projects
 
