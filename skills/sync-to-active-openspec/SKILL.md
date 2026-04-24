@@ -12,6 +12,7 @@ Sync code changes back into the active openspec (proposal, design, specs, tasks)
 ### 1. Find Active OpenSpec
 - `git branch --show-current` → fuzzy-match to `ls openspec/changes/`
 - No match or multiple → **ask user**. Do NOT guess.
+    - if no active change at all, MUST stop this skill execution
 - Announce: **"Your Openspec Changes Module Name Is: `<active>`"**
 
 ### 2. Load OpenSpec Instructions

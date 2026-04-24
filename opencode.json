@@ -3,7 +3,7 @@
   "plugin": [
     "oh-my-openagent",
     "@tarquinen/opencode-dcp@latest",
-    "opencode-claude-auth"
+    "opencode-mem"
   ],
   "permission": {
     "external_directory": {
@@ -13,7 +13,7 @@
       "~/.local/share/opencode/**": "allow",
       "~/.nvm/versions/node/**": "allow",
       "/tmp/**": "allow",
-      "/var/folders/**/T/oh-my-openagent/**": "allow"
+      "/var/folders/**/T/**": "allow"
     }
   },
   "mcp": {
