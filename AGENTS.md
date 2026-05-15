@@ -30,8 +30,15 @@
 **例外**：若使用者訊息中已明確要求執行，可直接進行但需顯示警告。
 
 ## Subagent
+- DO NOT call Plan agent, Only call plan agent if requirement is breaking change or over complicated
 - `task()` 只能二選一：`category` 或 `subagent_type`，不要同時傳。
 - 只要有 `category`，`subagent_type` 會被忽略，實際跑成 category task（通常是 Sisyphus-Junior）。
+
+## Code Style
+
+- MUST DO:
+    - code quility is important!
+    - Line breaking：100 字元。盡量用滿行寬，DO NOT 提前拆行。
 
 ## OpenSpec / OPSX
 

@@ -72,7 +72,7 @@
         //     "anthropic/claude-sonnet-4.6": "25%"
         // },
         // How often the context-limit nudge fires (1 = every fetch, 5 = every 5th)
-        "nudgeFrequency": 1,
+        "nudgeFrequency": 5,
         // Start adding compression reminders after this many
         // messages have happened since the last user message
         "iterationNudgeThreshold": 15,
